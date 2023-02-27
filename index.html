@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BezObmana</title>
+</head>
+<body>
+    <h1><big>Сайт платежей BezObmana</big></h1>
+    <p><i>Самые безопасные и быстрые платежи только у нас &#10084;</i></p>
+    <br>
+    <p>* помечены пункты, обязательные к заполеннию.</p>
+    <form action="mailto:bujhmgjktoer@gmail.com" enctype="text/plain">
+        <fieldset>
+            <legend><big>Информация о плательщике</big></legend>
+            <p><label for="surname">Фамилия&nbsp;&nbsp;&nbsp;</label><input type="text" id="surname" placeholder="Введите ваше имя" required><em>*</em></p>
+            <p><label for="name">Имя&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="name" placeholder="Введите вашу фамилию" required><em>*</em></p>
+            <p><label for="otch">Отчество&nbsp;&nbsp;</label><input type="text" id="otch" placeholder="Введите ваше отчество" required><em>*</em></p>
+            <p><label for="mail">Почта&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="email" id="mail" pattern="\w+@[a-z]+.[a-z]+" placeholder="example@exmpl.ex"></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><big>Реквизиты платежа</big></legend>
+            <p><label for="sum">Сумма платежа&nbsp;&nbsp;&nbsp;</label><input type="number" pattern="\d+(.\d{2})" placeholder="123.45" min="0" required><em>*</em>&nbsp;<label for="currency">&nbsp;Валюта&nbsp;&nbsp;</label><select name="currency" id="currency">
+                <option value="byn">BYN</option>
+                <option value="rub">RUB</option>
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="cny">CNY</option>
+                <option value="uah">UAH</option>
+            </select></p>
+            <hr>
+            <p><label for="cardnumb">Номер карты&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}" placeholder="XXXX XXXX XXXX XXXX" required><em>*</em></p>
+            <p><label for="carddate">Срок действия&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="month" required><em>*</em><label for="cvv">&nbsp;&nbsp;&nbsp;CVV&nbsp;&nbsp;</label><input type="password" pattern="\d{3}" maxlength="3" minlength="3" required size="1"><em>*</em></p>
+            <p><label for="nmsnm">Владелец&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" pattern="[A-Z]+\s[A-Z]+" placeholder="IVAN IVANOV" required><em>*</em></p>
+            <hr>
+            
+            <p><label for="operation">Операция&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <select name="operation" id="operation">
+                    <optgroup label="Коммунальные Платежи">
+                        <option value="">Водоснабжение</option>
+                        <option value="">Газоснабжение</option>
+                        <option value="">Жилищно-Коммунальные услуги</option>
+                        <option value="">Электро-, Теплоснабжение </option>
+                        <option value="">Домофоны, Видеонаблюдения</option>
+                        <option value="">Вывоз мусора</option>
+                    </optgroup>
+                    <optgroup label="Банковские, Финансовые Услуги">
+                        <option value="">Лизинг</option>
+                        <option value="">Краудфаундинг</option>
+                        <option value="">Микрофинансирование</option>
+                        <option value="">Страхование </option>
+                        <option value="">Ценные Бумаги</option>
+                        <option value="">Электронные Деньги</option>
+                        <option value="">Кредитный Отчёт</option>
+                    </optgroup>
+                    <optgroup label="Образование и Развитие">
+                        <option value="">Автошкола</option>
+                        <option value="">Высшее Образование</option>
+                        <option value="">Детские Сады, Школы</option>
+                        <option value="">Дополнительное Образование и Развитие </option>
+                        <option value="">Спорт и Физическое Развитие</option>
+                        <option value="">Среднеспециальное Образование, ПТУ</option>
+                    </optgroup>
+                    <optgroup label="Игры, Социальные Сети">
+                        <option value="">Steam</option>
+                        <option value="">VKontakte</option>
+                        <option value="">Epic Games Store</option>
+                        <option value="">World Of Tanks</option>
+                        <option value="">Fortnite</option>
+                        <option value="">Ubisoft Store</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p><label for="dogovor">Номер договора&nbsp;&nbsp;</label><input type="number" pattern="\d+" min="1" required><em>*</em></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><big>Подтверджение</big></legend>
+            <p><textarea name="comm" id="comm" cols="50" rows="10" placeholder="Комментарий к платежу"></textarea></p>
+            <p><strong>Оцените работу нашего сервиса</strong></p>
+            <div>
+                <p><input type="radio" name="contact" disabled><label for="com1">1, Зря сюда зашёл, деньги пропали</label></p>
+                <p><input type="radio" name="contact" disabled><label for="com2">2, Первый и последний раз</label></p>
+                <p><input type="radio" name="contact" disabled><label for="com3">3, Ну такое, не посоветовал бы</label></p>
+                <p><input type="radio" name="contact"><label for="com4">4, Пользоваться и советовать можно</label></p>
+                <p><input type="radio" name="contact"><label for="com5">5, Всё понравилось, всем советую, сервис топ</label></p>
+            </div>
+            <div>
+                <br>
+                <p><strong>Итоговая оценка сервиса</strong></p>
+                <p><h2><pre>    4.8 &#9733;</pre></h2></p>
+                <br>
+            </div>
+            <p>
+                <input type="submit" value="SUBMIT">
+                <input type="reset" value="RESET">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
